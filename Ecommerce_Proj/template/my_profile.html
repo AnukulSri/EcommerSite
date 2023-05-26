@@ -1,0 +1,549 @@
+{% load static %}
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fastkart">
+  <meta name="keywords" content="Fastkart">
+  <meta charset="utf-8">
+
+  <meta name="author" content="Fastkart">
+  <link rel="icon" href="{% static 'assets/images/favicon/7.png' %}" type="image/x-icon">
+  <title>FastKart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-5Z5zSd5kaGjIvgysyMKdQRyJ4FyfV7bsGUP1oxuV7k8rZ0u9XUoM6h2j1U8myAkto33V1+a3lLozqW+dXY8k6Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- bootstrap css -->
+  <link id="rtl-link" rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors/bootstrap.css' %}">
+
+  <!-- wow css -->
+  <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}" />
+
+  <!-- font-awesome css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors/font-awesome.css' %}">
+
+  <!-- feather icon css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors/feather-icon.css' %}">
+
+  <!-- slick css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors/slick/slick.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors/slick/slick-theme.css' %}">
+
+  <!-- Iconly css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bulk-style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors/animate.css' %}">
+
+  <!-- Template css -->
+  <link id="color-link" rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+
+
+  <style>
+    #query{
+      border-radius: 8px;
+    }
+    #btn{
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body class="theme-color-5">
+  {%if request.user.is_authenticated%}
+  <!-- Loader Start -->
+  <div class="fullpage-loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Loader End -->
+
+  <!-- Header Start -->
+  <header class="">
+
+
+    <div class="top-nav top-header sticky-header">
+      <div class="container-fluid-lg">
+        <div class="row">
+          <div class="col-12">
+            <div class="navbar-top">
+              <button class="navbar-toggler d-xl-none d-inline navbar-menu-button me-2" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                <span class="navbar-toggler-icon">
+                  <i class="fa-solid fa-bars"></i>
+                </span>
+              </button>
+              <a href="home" class="web-logo nav-logo">
+                <img src="{% static 'assets/images/logo/6.png' %}" class="img-fluid blur-up lazyload" alt="">
+              </a>
+
+              <div class="header-nav-middle">
+                <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                  <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                    <div class="offcanvas-header navbar-shadow">
+                      <h5>Menu</h5>
+                      <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown dropdown-mega">
+                          <a class="nav-link dropdown-toggle ps-xl-2 ps-0" href="customer-home">Home</a>
+
+                          <div class="dropdown-menu dropdown-menu-2 dropdown-image">
+                            <div class="dropdown-column">
+                              <a class="dropdown-item" href="comming_soon">
+                                <img src="{% static 'assets/images/theme/1.jpg' %}" class="img-fluid" alt="">
+                                <span>Kartshop</span>
+                              </a>
+
+                              <a class="dropdown-item" href="comming_soon">
+                                <img src="{% static 'assets/images/theme/2.jpg' %}" class="img-fluid" alt="">
+                                <span>Sweetshop</span>
+                              </a>
+
+                              <a class="dropdown-item" href="comming_soon">
+                                <img src="{% static 'assets/images/theme/3.jpg' %}" class="img-fluid" alt="">
+                                <span>Organic</span>
+                              </a>
+
+                              <a class="dropdown-item" href="comming_soon">
+                                <img src="{% static 'assets/images/theme/4.jpg' %}" class="img-fluid" alt="">
+                                <span>Supershop</span>
+                              </a>
+
+                              <a class="dropdown-item" href="comming_soon">
+                                <img src="{% static 'assets/images/theme/5.jpg' %}" class="img-fluid" alt="">
+                                <span>Slicktech</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                              data-bs-toggle="dropdown">Product</a>
+  
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="product-4-image.html">Product
+                                  4 </a>
+                              </li>
+                              <li class="sub-dropdown-hover">
+                                <a href="javascript:void(0)" class="dropdown-item">Product
+                                  </a>
+                                <ul class="sub-menu">
+                                  <li>
+                                    <a href="#">table
+                                      </a>
+                                  </li>
+  
+                                  <li>
+                                    <a href="#">chair
+                                      </a>
+                                  </li>
+  
+                                  <li>
+                                    <a href="#">sofa
+                                      </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#" class="dropdown-item">Bed
+                                  </a>
+                              </li>
+                              <li>
+                                <a href="#" class="dropdown-item">cupboard
+                                  Slider</a>
+                              </li>
+                              <li>
+                                <a href="#" class="dropdown-item">bed
+                                  table</a>
+                              </li>
+                            </ul>
+                          </li>
+
+
+
+                        <li class="nav-item dropdown new-nav-item">
+                          <a class="nav-link dropdown-toggle" href="aboutus">About Us</a>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="contactus">Contact Us</a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="my-profile">Profile</a>
+
+                        </li>
+
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rightside-box">
+                <div class="search-full">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i data-feather="search" class="font-light"></i>
+                    </span>
+                    
+                  </div>
+                </div>
+                <ul class="right-side-menu">
+                  <li class="right-side">
+                    <div class="delivery-login-box">
+                      <div class="delivery-icon">
+                        <div class="search-box">
+                          <i data-feather="search"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="right-side">
+                    <a href="#" class="btn p-0 position-relative header-wishlist">
+                      <i data-feather="bookmark"></i>
+                    </a>
+                  </li>
+                  <li class="right-side">
+                    <div class="onhover-dropdown header-badge">
+                      <button type="button" class="btn p-0 position-relative header-wishlist">
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="right-side onhover-dropdown">
+                    <div class="delivery-login-box">
+                      <div class="delivery-icon">
+                        <i data-feather="user"></i>
+                      </div>
+                      <div class="delivery-detail">
+                        <h6>Hello,</h6>
+                        <h5>My Account</h5>
+                      </div>
+                    </div>
+
+                    <div class="onhover-div onhover-div-login">
+                      <ul class="user-box-name">
+                        <li class="product-box-contain">
+                          <i></i>
+                          <a href="/customerlogin">Logout</a>
+                        </li>
+
+
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  {%endif%}
+  
+  
+  <section class="banner-section">
+    <div class="container-fluid-lg">
+      <div class="row">
+        <div class="col-12">
+          <div class="banner-contain-3 section-b-space section-t-space hover-effect overflow-visible">
+            <img src="{% static 'assets/images/furniture/banner/6.jpg' %}" class="bg-img" alt="">
+            <img src="{% static 'assets/images/furniture/banner/1-1.png' %}" class="flower-pot img-fluid" alt="">
+            <div class="banner-detail p-center-left position-relative d-block py-0 banner-furniture mend-auto">
+              <div class="row">
+                <div class="col-xl-6 offset-xxl-2 offset-xl-1 col-md-8 col-sm-9">
+                  <h4 class="text-uppercase text-yellow text-kaushan furniture-title">Best of
+                    Collections <img src="https://themes.pixelstrap.com/fastkart/assets/images/furniture/arrow.svg"
+                      alt=""></h4>
+                  <h2 class="mt-sm-3 mt-1 mb-2 text-content">Home Decor <span
+                      class="theme-color fw-bold">LookBook</span> 2022</h2>
+                  <p class="text-content">In publishing and graphic design, Lorem ipsum is a
+                    placeholder text commonly used to demonstrate.</p>
+                  <button class="btn theme-bg-color mt-sm-4 mt-2 btn-md text-white fw-bold">Shop Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center>
+    <div style="padding-left:300px;" class="container">
+  
+      <div class="col-sm-2 col-md-2">
+        <img src="{% static 'profile_pic.CustomerProfilePic.url' %}" alt="profile pic" class="img-rounded img-responsive" />
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <blockquote>
+          <p>Username: {{request.user}}</p> <small><cite title="Source Title">Address: {{customer.address}} <i
+                class="glyphicon glyphicon-map-marker"></i></cite></small>
+        </blockquote>
+        <p><i class="glyphicon glyphicon-phone"></i>Contact: {{customer.mobile}}
+        </p>
+      </div>
+     
+  
+    </div>
+  </center>
+  <div style="text-align: center; padding-left:650px;">
+    <a href="/edit-profile"><button class="btn btn-primary btn-lg"><span style="background: rgb(35, 106, 213); padding: 5px; color:white">Edit Profile </span></button></a>
+  </div>
+  <br><br><br>
+
+
+ 
+
+
+ 
+  <footer class="section-t-space footer-section-2 footer-color-3">
+    <div class="container-fluid-lg">
+      <div class="main-footer">
+        <div class="row g-md-4 gy-sm-5">
+          <div class="col-xxl-3 col-xl-4 col-sm-6">
+            <a href="/" class="foot-logo theme-logo">
+              <img src="{% static 'assets/images/logo/4.png' %}" class="img-fluid blur-up lazyload" alt="">
+            </a>
+            <p class="information-text information-text-2">it is a long established fact that a reader will
+              be distracted by the readable content.</p>
+            <ul class="social-icon">
+              <li class="light-bg">
+                <a href="https://www.facebook.com/" class="footer-link-color">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="light-bg">
+                <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin"
+                  class="footer-link-color">
+                  <i class="fa fa-google"></i>
+                </a>
+              </li>
+              <li class="light-bg">
+                <a href="https://twitter.com/i/flow/login" class="footer-link-color">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="light-bg">
+                <a href="https://www.instagram.com/" class="footer-link-color">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li class="light-bg">
+                <a href="https://in.pinterest.com/" class="footer-link-color">
+                  <i class="fa fa-pinterest-p"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xxl-2 col-xl-4 col-sm-6">
+            <div class="footer-title">
+              <h4 class="text-white">About Fastkart</h4>
+            </div>
+            <ul class="footer-list footer-contact footer-list-light">
+              <li>
+                <a href="aboutus" class="light-text">About Us</a>
+              </li>
+              <li>
+                <a href="contactus" class="light-text">Contact Us</a>
+              </li>
+              <li>
+                <a href="term_Condition" class="light-text">Terms & Coditions</a>
+              </li>
+
+              
+            </ul>
+          </div>
+
+          <div class="col-xxl-2 col-xl-4 col-sm-6">
+            <div class="footer-title">
+              <h4 class="text-white">Useful Link</h4>
+            </div>
+            <ul class="footer-list footer-list-light footer-contact">
+              <li>
+                <a href="my-order" class="light-text">Your Order</a>
+              </li>
+              <li>
+                <a href="my-profile" class="light-text">Your Account</a>
+              </li>
+
+              <li>
+                <a href="#" class="light-text">Your Wishlist</a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="col-xxl-2 col-xl-4 col-sm-6">
+            <div class="footer-title">
+              <h4 class="text-white">Upcoming Features</h4>
+            </div>
+            <ul class="footer-list footer-list-light footer-contact">
+              <li>
+                <a href="comming_soon" class="light-text">Fresh Vegetables</a>
+              </li>
+              <li>
+                <a href="comming_soon" class="light-text">Hot Spice</a>
+              </li>
+              <li>
+                <a href="comming_soon" class="light-text">Brand New Bags</a>
+              </li>
+              <li>
+                <a href="comming_soon" class="light-text">New Bakery</a>
+              </li>
+              <li>
+                <a href="comming_soon" class="light-text">New Grocery</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xxl-3 col-xl-4 col-sm-6">
+            <div class="footer-title">
+              <h4 class="text-white">Store infomation</h4>
+            </div>
+            <ul class="footer-address footer-contact">
+              <li>
+                <a href="javascript:void(0)" class="light-text">
+                  <div class="inform-box flex-start-box">
+                    <i data-feather="map-pin"></i>
+                    <p>Fastkart Store, Demo store india</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0)" class="light-text">
+                  <div class="inform-box">
+                    <i data-feather="phone"></i>
+                    <p>Call us: *9179059*****</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0)" class="light-text">
+                  <div class="inform-box">
+                    <i data-feather="mail"></i>
+                    <p>dataoutlook123@gmail.com</p>
+                  </div>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer sub-footer-lite section-b-space section-t-space">
+        <div class="left-footer">
+          <p class="light-text">2023 Copyright. Design By Anukul Srivastava</p>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- latest jquery-->
+  <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+
+  <!-- jquery ui-->
+  <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+
+  <!-- Bootstrap js-->
+  <script src="{% static 'assets/js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap/bootstrap-notify.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap/popper.min.js' %}"></script>
+
+  <!-- feather icon js-->
+  <script src="{% static 'assets/js/feather/feather.min.js' %}"></script>
+  <script src="{% static 'assets/js/feather/feather-icon.js' %}"></script>
+
+  <!-- Lazyload Js -->
+  <script src="{% static 'assets/js/lazysizes.min.js' %}"></script>
+
+  <!-- Slick js-->
+  <script src="{% static 'assets/js/slick/slick.js' %}"></script>
+  <script src="{% static 'assets/js/slick/slick-animation.min.js' %}"></script>
+  <script src="{% static 'assets/js/slick/custom_slick.js' %}"></script>
+
+  <!-- Auto Height Js -->
+  <script src="{% static 'assets/js/auto-height.js' %}"></script>
+
+  <!-- Timer Js -->
+  <script src="{% static 'assets/js/timer1.js' %}"></script>
+
+  <!-- Quantity js -->
+  <script src="{% static 'assets/js/quantity-2.js' %}"></script>
+
+  <!-- WOW js -->
+  <script src="{% static 'assets/js/wow.min.js' %}"></script>
+  <script src="{% static 'assets/js/custom-wow.js' %}"></script>
+
+  <!-- script js -->
+  <script src="{% static 'assets/js/script.js' %}"></script>
+
+  <!-- thme setting js -->
+  <script src="{% static 'assets/js/theme-setting.js' %}"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "70%";
+
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.body.style.backgroundColor = "rgba(0,0,0,0)";
+      }
+
+
+    });
+  </script>
+</body>
+
+</html>
+
+
+
